@@ -2,6 +2,7 @@ package Utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.Locale;
 
 import java.time.Duration;
 
@@ -10,6 +11,9 @@ public class GWD {
 
     public static WebDriver getDriver()
     {
+        Locale.setDefault(new Locale("En"));
+        System.setProperty("user.language","EN");
+
         if (driver == null)
         {
             driver = new ChromeDriver();
