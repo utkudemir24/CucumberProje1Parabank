@@ -20,27 +20,20 @@ public class GWD {
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         }
-
-
         return driver;
     }
-
     public static void quitDriver(){
-
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
         if (driver != null)
         {
             driver.quit();
             driver=null;
         }
-
     }
-
 }
 
 
