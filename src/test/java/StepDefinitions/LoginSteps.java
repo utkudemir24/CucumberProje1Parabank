@@ -1,13 +1,13 @@
 package StepDefinitions;
 
-import Pages._601_DialogContent;
+import Pages.DialogContent;
 import Utilities.GWD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginSteps {
-    _601_DialogContent dc = new _601_DialogContent();
+    DialogContent dc = new DialogContent();
     @Given("Navigate to Para Bank")
     public void navigateToParaBank() {
         GWD.getDriver().get("https://parabank.parasoft.com/parabank/index.htm");
