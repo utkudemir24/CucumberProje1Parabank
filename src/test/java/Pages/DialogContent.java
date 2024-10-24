@@ -1,4 +1,4 @@
 package Pages;
 
-public class DialogContent {
+public class DialogContent extends ParentPage {
 }
