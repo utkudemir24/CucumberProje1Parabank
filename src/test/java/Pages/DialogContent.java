@@ -64,6 +64,9 @@ public class DialogContent extends ParentPage {
     @FindBy(linkText = "Profile Updated")
     public WebElement profileUpdated;
 
+    @FindBy (linkText = "Address is required.")
+    public WebElement missingInformation;
+
 
 
 }

@@ -8,7 +8,8 @@ Feature: Hesap Functionality
 
     When Navigate to Update Contact Info
     Then User should update Contact Info
-    And User should be displayed succes message
+    And User should be displayed success message
+
 
     Scenario: Missing Information
       When Navigate to Update Contact Info
