@@ -11,5 +11,8 @@ public class LeftNav extends ParentPage {
     }
     @FindBy(linkText = "Open New Account")
     public WebElement yeniHesap;
+
+    @FindBy(linkText ="Update Contact Info")
+    public WebElement updateContactInfo ; //kullanıcı bilgilerini güncelle
 }
 

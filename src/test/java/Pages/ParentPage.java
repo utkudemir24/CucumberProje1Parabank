@@ -37,7 +37,7 @@ public class ParentPage {
     }
 
 
-    public void verifyMessageContainsTextINCELEME(String value) {
+    public void verifyMessageContainsTextINCELEME(WebElement profileUpdated, String value) {
 
 
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//hot-toast-container/div/div/div//*"), 0));

@@ -37,5 +37,36 @@ public class DialogContent extends ParentPage {
     @FindBy(xpath = "(//div[@id='openAccountResult']//p)[1]")
     public WebElement AccountSuccessfuly;
 
+    @FindBy(id = "customer.firFirst Name:stName")
+    public WebElement FirstName;
+
+    @FindBy (id="customer.lastName")
+    public WebElement LastName;
+
+    @FindBy (id="customer.address.street")
+    public WebElement address;
+
+    @FindBy (id="customer.address.city")
+    public WebElement city;
+
+    @FindBy (id="ustomer.address.state")
+    public WebElement state;
+
+    @FindBy (id="customer.address.zipCode")
+    public WebElement zipCode;
+
+    @FindBy (id="customer.phoneNumber")
+    public WebElement phoneNumber;
+
+    @FindBy (xpath = "//input[@value='Update Profile']")
+    public WebElement updateProfilButton;
+
+    @FindBy(linkText = "Profile Updated")
+    public WebElement profileUpdated;
+
+    @FindBy (linkText = "Address is required.")
+    public WebElement missingInformation;
+
+
 
 }
