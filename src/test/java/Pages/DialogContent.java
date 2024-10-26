@@ -9,6 +9,7 @@ public class DialogContent extends ParentPage {
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
+
     //TeamTester    TeamNine
     @FindBy(xpath = "//input[@name='username']")
     public WebElement userName;
@@ -22,16 +23,16 @@ public class DialogContent extends ParentPage {
     @FindBy(xpath = "//p[@class='smallText']")
     public WebElement successLoginMessage;
     // US04 Elements
-    @FindBy (xpath = "//select[@id='type']")
+    @FindBy(xpath = "//select[@id='type']")
     public WebElement select;
 
-    @FindBy (xpath = "(//select[@id='type']//option)[1]")
+    @FindBy(xpath = "(//select[@id='type']//option)[1]")
     public WebElement checking;
 
-    @FindBy (xpath = "(//select[@id='type']//option)[2]")
+    @FindBy(xpath = "(//select[@id='type']//option)[2]")
     public WebElement saving;
 
-    @FindBy (xpath = "//input[@type='button']")
+    @FindBy(xpath = "//input[@type='button']")
     public WebElement newAccountButton;
 
     @FindBy(xpath = "(//div[@id='openAccountResult']//p)[1]")
@@ -40,31 +41,31 @@ public class DialogContent extends ParentPage {
     @FindBy(id = "customer.firFirst Name:stName")
     public WebElement FirstName;
 
-    @FindBy (id="customer.lastName")
+    @FindBy(id = "customer.lastName")
     public WebElement LastName;
 
-    @FindBy (id="customer.address.street")
+    @FindBy(id = "customer.address.street")
     public WebElement address;
 
-    @FindBy (id="customer.address.city")
+    @FindBy(id = "customer.address.city")
     public WebElement city;
 
-    @FindBy (id="ustomer.address.state")
+    @FindBy(id = "ustomer.address.state")
     public WebElement state;
 
-    @FindBy (id="customer.address.zipCode")
+    @FindBy(id = "customer.address.zipCode")
     public WebElement zipCode;
 
-    @FindBy (id="customer.phoneNumber")
+    @FindBy(id = "customer.phoneNumber")
     public WebElement phoneNumber;
 
-    @FindBy (xpath = "//input[@value='Update Profile']")
+    @FindBy(xpath = "//input[@value='Update Profile']")
     public WebElement updateProfilButton;
 
     @FindBy(linkText = "Profile Updated")
     public WebElement profileUpdated;
 
-    @FindBy (linkText = "Address is required.")
+    @FindBy(linkText = "Address is required.")
     public WebElement missingInformation;
 
     //US07 Elements
@@ -105,4 +106,13 @@ public class DialogContent extends ParentPage {
 
     @FindBy(xpath = "//b[.='No transactions found.']")
     public WebElement transactionsMessage;
+
+    @FindBy(xpath = "//*[@name='username']")
+    public WebElement UsernameLogin;
+
+    @FindBy(xpath = "//*[@name='password']")
+    public WebElement PasswordLogin;
+
+    @FindBy(xpath = "//*[@value='Log In']")
+    public WebElement Login;
 }
