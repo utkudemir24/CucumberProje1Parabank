@@ -5,6 +5,7 @@ import Utilities.GWD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.commons.lang3.RandomStringUtils;
 
 public class LoginSteps {
     DialogContent dc = new DialogContent();
@@ -21,5 +22,16 @@ public class LoginSteps {
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
         dc.LoginContainsText(dc.successLoginMessage,"Welcome");
+    }
+
+    @When("Enter false username and false password and click login button")
+    public void enterFalseUsernameAndFalsePasswordAndClickLoginButton() {
+        String dataAlp= RandomStringUtils.randomAlphanumeric(8);
+        String dataNum= RandomStringUtils.randomNumeric(4);
+
+        dc.mySendKeys(dc.UsernameLogin, dataAlp);
+        dc.mySendKeys(dc.PasswordLogin, dataNum);
+        dc.myClick(dc.Login);
+
     }
 }
