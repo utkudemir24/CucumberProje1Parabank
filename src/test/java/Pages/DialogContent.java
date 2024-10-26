@@ -67,6 +67,42 @@ public class DialogContent extends ParentPage {
     @FindBy (linkText = "Address is required.")
     public WebElement missingInformation;
 
+    //US07 Elements
+    public WebElement loanAmountBox;
 
+    @FindBy(xpath = "//input[@id='downPayment']")
+    public WebElement downPaymentBox;
 
+    @FindBy(xpath = "//select[@id='fromAccountId']")
+    public WebElement fromAccountDropDown;
+
+    @FindBy(xpath = "//input[@value='Apply Now']")
+    public WebElement applyNowButton;
+
+    @FindBy(xpath = "//td[@id='loanProviderName']")
+    public WebElement loanProvider;
+
+    @FindBy(xpath = "//td[@id='loanStatus']")
+    public WebElement loanStatus;
+
+    @FindBy(xpath = "//a[@id='newAccountId']")
+    public WebElement newAccountNumberLink;
+
+    @FindBy(xpath = "//p[contains(text(),'approved')]")
+    public WebElement approvalMessage;
+
+    @FindBy(xpath = "//td[@id='accountId']")
+    public WebElement accountNumber;
+
+    @FindBy(xpath = "//td[@id='accountType']")
+    public WebElement accountType;
+
+    @FindBy(xpath = "//td[@id='balance']")
+    public WebElement accountBalance;
+
+    @FindBy(xpath = "//td[@id='availableBalance']")
+    public WebElement accountAvailableBalance;
+
+    @FindBy(xpath = "//b[.='No transactions found.']")
+    public WebElement transactionsMessage;
 }
