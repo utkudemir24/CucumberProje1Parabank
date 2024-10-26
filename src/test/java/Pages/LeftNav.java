@@ -14,5 +14,8 @@ public class LeftNav extends ParentPage {
 
     @FindBy(linkText ="Update Contact Info")
     public WebElement updateContactInfo ; //kullanıcı bilgilerini güncelle
+
+    @FindBy(xpath = "//div[@id='leftPanel']/ul//a[text()='Request Loan']")
+    public WebElement requestLoan;
 }
 
