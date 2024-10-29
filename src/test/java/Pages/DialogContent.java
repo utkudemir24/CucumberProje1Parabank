@@ -5,12 +5,56 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DialogContent extends ParentPage {
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
+    //US03 REGSITER
+    @FindBy(xpath = "(//div[@id='loginPanel']//a)[2]")
+    public WebElement registerLink;
 
-    //TeamTester    TeamNine
+    @FindBy(xpath = "//input[@id=\"customer.firstName\"]")
+    public WebElement firstNameRegister;
+
+    @FindBy(xpath = "//input[@id=\"customer.lastName\"]")
+    public WebElement lastNameRegister;
+
+    @FindBy(xpath = "//input[@id=\"customer.address.street\"]")
+    public WebElement adressRegister;
+
+    @FindBy(xpath = "//input[@id=\"customer.address.city\"]")
+    public WebElement cityRegister;
+
+    @FindBy(xpath = "//input[@id=\"customer.address.state\"]")
+    public WebElement stateRegister;
+
+    @FindBy(xpath = "//input[@id=\"customer.address.zipCode\"]")
+    public WebElement zipCodeRegister;
+
+    @FindBy(xpath = "//input[@id=\"customer.phoneNumber\"]")
+    public WebElement phoneRegister;
+
+    @FindBy(xpath = "//input[@id=\"customer.ssn\"]")
+    public WebElement snnRegister;
+
+    @FindBy(xpath = "//input[@id=\"customer.username\"]")
+    public WebElement userNameRegister;
+
+    @FindBy(xpath = "//input[@id=\"customer.password\"]")
+    public WebElement passwordRegister;
+
+    @FindBy(xpath = "//input[@id=\"repeatedPassword\"]")
+    public WebElement repeatedPassword;
+
+    @FindBy(xpath = "(//input[@class=\"button\"])[2]")
+    public WebElement registerButton;
+
+    @FindBy(xpath = "//div[@id='rightPanel']//p")
+    public WebElement successMessageRegister;
+
+    //US02 LOGIN
     @FindBy(xpath = "//input[@name='username']")
     public WebElement userName;
 
@@ -59,6 +103,9 @@ public class DialogContent extends ParentPage {
     @FindBy(id = "customer.phoneNumber")
     public WebElement phoneNumber;
 
+    @FindBy(xpath = "//div[@id=\"rightPanel\"]/h1")
+    public WebElement failedMessage;
+
     @FindBy(xpath = "//input[@value='Update Profile']")
     public WebElement updateProfilButton;
 
@@ -67,6 +114,23 @@ public class DialogContent extends ParentPage {
 
     @FindBy(linkText = "Address is required.")
     public WebElement missingInformation;
+
+    //US05 TRANSFER FUNDS
+    @FindBy(xpath = "input[@id=\"amount\"]")
+    public WebElement amountBox;
+
+    @FindBy(xpath = "//select[@id=\"fromAccountId\"]/option")
+    public List<WebElement> fromAccounts;
+
+    @FindBy(xpath = "//select[@id=\"toAccountId\"]/option")
+    public List<WebElement>  toAccounts ;
+
+    @FindBy(xpath = "//form[@id=\"transferForm\"]/div/input")
+    public WebElement transferButton;
+
+    @FindBy(xpath = "//div[@id=\"showResult\"]")
+    public WebElement succesMessageTransfer;
+
 
     //US07 Elements
     public WebElement loanAmountBox;

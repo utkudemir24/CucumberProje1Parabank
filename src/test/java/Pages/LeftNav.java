@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class LeftNav extends ParentPage {
     public LeftNav() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -17,5 +19,10 @@ public class LeftNav extends ParentPage {
 
     @FindBy(xpath = "//div[@id='leftPanel']/ul//a[text()='Request Loan']")
     public WebElement requestLoan;
+
+    //US05 Transfer Funds
+    @FindBy(xpath = "//*[@id=\"leftPanel\"]/ul/li[3]/a")
+    public WebElement TransferFundsLink;
+
 }
 
