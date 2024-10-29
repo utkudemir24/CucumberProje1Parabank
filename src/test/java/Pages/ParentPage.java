@@ -36,19 +36,10 @@ public class ParentPage {
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
     }
 
-
     public void verifyMessageContainsTextINCELEME(WebElement profileUpdated, String value) {
-
-
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//hot-toast-container/div/div/div//*"), 0));
-
-
         WebElement MesajKutusuParent2 = GWD.getDriver().findElement(By.tagName("mat-panel-description"));
-
-
         Assert.assertTrue(MesajKutusuParent2.getAttribute("innerHTML").toLowerCase().contains(value.toLowerCase()));
 
     }
-
-
 }

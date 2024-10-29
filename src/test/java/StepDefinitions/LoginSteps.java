@@ -34,4 +34,16 @@ public class LoginSteps {
         dc.myClick(dc.Login);
 
     }
+
+    @When("Enter invalid username as {string} and invalid password as {string} and click login button")
+    public void enterInvalidUsernameAsAndInvalidPasswordAsAndClickLoginButton(String userName, String password) {
+        dc.mySendKeys(dc.UsernameLogin, userName);
+        dc.mySendKeys(dc.PasswordLogin, password);
+        dc.myClick(dc.Login);
+    }
+
+    @Then("User should Failed login")
+    public void userShouldFailedLogin() {
+        dc.LoginContainsText(dc.failedMessage,"Error");
+    }
 }
