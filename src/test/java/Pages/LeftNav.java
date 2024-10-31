@@ -11,6 +11,8 @@ public class LeftNav extends ParentPage {
     public LeftNav() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
+
+    //US04
     @FindBy(linkText = "Open New Account")
     public WebElement yeniHesap;
 
@@ -23,6 +25,13 @@ public class LeftNav extends ParentPage {
     //US05 Transfer Funds
     @FindBy(xpath = "//*[@id=\"leftPanel\"]/ul/li[3]/a")
     public WebElement TransferFundsLink;
+
+    //US03
+    @FindBy(xpath = "//a[@href='billpay.htm']")
+    public WebElement billpay;
+
+    @FindBy(xpath = "//a[@href='overview.htm']//font//font")
+    public WebElement hesapbakiyePaying;
 
 }
 
